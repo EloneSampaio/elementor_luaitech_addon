@@ -1,0 +1,201 @@
+/* .swiper-container {
+    width: 80vw;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: 50%;
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+/*
+.swiper-container {
+	width: 100%;
+	height: 100%;
+  }
+
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+ */
+	/* Center slide text vertically */
+	/* display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
+
+  .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  } */
+/*
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	height: 100%;
+	display: flex;
+}
+.swiper-image {
+	height: 400px;
+	width: 100%;
+	object-fit: cover;
+}
+.swiper-text {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 40px;
+}
+ */
+/*  .container {
+	max-width: 1100px;
+  }
+
+  .section-with-carousel .swiper-slide figure {
+	position: relative;
+	overflow: hidden;
+  }
+
+  .section-with-carousel .swiper-slide img {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+  }
+
+  .section-with-carousel .swiper-slide figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(20%);
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	padding: 20px;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	transition: all 0.4s;
+  }
+
+  .section-with-carousel .swiper-slide figcaption svg {
+	flex-shrink: 0;
+	fill: white;
+	margin-right: 10px;
+  }
+
+  .section-with-carousel .swiper-slide-active figcaption {
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+  }
+
+  .section-with-carousel .carousel-controls {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	padding: 0 12px;
+	z-index: 1;
+  }
+
+  .section-with-carousel .carousel-controls .carousel-control {
+	opacity: 0.25;
+	transition: opacity 0.3s;
+  }
+
+  .section-with-carousel .carousel-controls .carousel-control:hover {
+	opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+	.section-with-carousel .swiper-slide img {
+	  height: 370px;
+	}
+  }
+
+  @media (min-width: 1200px) {
+	.section-with-carousel .swiper-slide img {
+	  height: 420px;
+	}
+
+	.section-with-carousel .carousel-controls {
+	  padding: 0 50px;
+	}
+  }
+ */
+
+/* widget C */
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+	background-color: #fff;
+}
+.transition{
+    transition: all .2s ease-out;
+}
+
+.h-60{
+  height: 14rem;
+}
+
+.w-128{
+  width: 32rem;
+}
+
+
+
+.showcase-bg {
+    width: 100%;
+	position: relative;
+	background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/showcase-bg.png') no-repeat center center/cover;
+    height: 70vh;
+}
+
+.bg-1 {
+    width: 100%;
+	position: relative;
+	background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/bg/01.svg') no-repeat center center/cover;
+    height: 80vh;
+    min-height: 140%;
+}
+
+@media only screen and (max-width: 768px){
+    .bg-1 {
+        width: 100%;
+        position: relative;
+        background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/bg/01.svg') no-repeat center center/cover;
+        height: 80%;
+
+    }
+    .img-2{
+        position: relative;
+        width: 40rem;
+        bottom: 4rem;
+    }
+}

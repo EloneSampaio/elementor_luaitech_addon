@@ -132,32 +132,52 @@ class WidgetA extends Widget_Base
 		$repeater->add_control(
 			'image',
 			[
-				'label' => esc_html__('Selecionar Imagens', 'elementor-luaitech-addon'),
+				'label' => esc_html__('Selecionar Slide', 'elementor-luaitech-addon'),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
-				'show_label' => false,
+				'show_label' => true,
 				'dynamic' => [
 					'active' => true,
 				],
 			]
 		);
 
+		//imagem com descrição dos produtos
 		$repeater->add_control(
-			'fundo',
+			'img_descricao',
 			[
-				'label' => esc_html__('Selecionar Imagem', 'elementor-luaitech-addon'),
+				'label' => esc_html__('Selecionar Imagem circulos', 'elementor-luaitech-addon'),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
-				'show_label' => false,
+				'show_label' => true,
 				'dynamic' => [
 					'active' => true,
 				],
 			]
 		);
+
+		//add background imagem
+
+		$repeater->add_control(
+			'background_imagem',
+			[
+				'label' => esc_html__('Background Imagem do produto', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+				'show_label' => true,
+				'dynamic' => [
+					'active' => true,
+				],
+			]
+		);
+
+
 
 		$repeater->add_group_control(
 			\Elementor\Group_Control_Image_Size::get_type(),
@@ -270,17 +290,19 @@ class WidgetA extends Widget_Base
 								<?php
 
 								foreach ($settings['slide_card'] as $slide) {
-									$fundo_url = \Elementor\Group_Control_Image_Size::get_attachment_image_src($slide['fundo']['id'], 'thumbnail', $settings);
+									$fundo_url = \Elementor\Group_Control_Image_Size::get_attachment_image_src($slide['background_imagem']['id'], 'thumbnail', $settings);
 									$image_url = \Elementor\Group_Control_Image_Size::get_attachment_image_src($slide['image']['id'], 'thumbnail', $settings);
 
 								?>
-                                <div class="swiper-slide" data-description="<?php esc_attr_e($slide['slide_description']); ?>" data-title="<?php esc_attr_e($slide['slide_titulo']); ?>" data-tree="<?php esc_attr_e($fundo_url); ?>" >
+                                <div class="swiper-slide" data-description="<?php esc_attr_e($slide['slide_description']); ?>" data-title="<?php esc_attr_e($slide['slide_titulo']); ?>" data-fundo="<?php esc_attr_e($fundo_url); ?>" >
 									<img src="<?php echo $image_url; ?>" alt="" class="w-5/6 h-5/6 sm:w-4/4 sm:h-4/4 md:w-full md:h-full img-2">
                                 </div>
 								<?php } ?>
                                 </div>
-								<div class="swiper-pagination"></div>
 
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 							</div>
 
 								</div>
@@ -293,7 +315,7 @@ class WidgetA extends Widget_Base
 					</div>
 				</div>
 				<!--Show case end-->
-				<div class="font-sans text-gray-900 bg-1" id="conteudo">
+				<div class="font-sans text-gray-900 bg-1" id="conteudo" style="	background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/cor/01.png') no-repeat center center/cover;">
 					<div class="mx-auto max-w-7xl px-4  sm:px-6">
 						<div class="pt-10 sm:text-center lg:text-left">
 							<h1 class="text-xl  pt-10 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-3xl text-black">
@@ -363,8 +385,8 @@ class WidgetA extends Widget_Base
 				},
 			},
 			navigation: {
-				nextEl: '.carousel-control-right',
-				prevEl: '.carousel-control-left',
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
 			keyboard: {
 				enabled: false,
@@ -384,15 +406,19 @@ class WidgetA extends Widget_Base
 
 				var description = jQuery(this).parent().attr('data-description');
 				var title = jQuery(this).parent().attr('data-title');
-				var fundo = jQuery(this).parent().attr('data-tree');
+				var fundo = jQuery(this).parent().attr('data-fundo');
+				console.log(fundo);
 				//	jQuery('#conteudo').removeClass('invisible');
+				//change text_institutional color
 				jQuery('#text_institutional').html(description);
+				jQuery('#text_institutional').removeClass('text-black'); //text content description product
+				jQuery('#text_institutional').addClass('text-white');
 				jQuery('#text_title_produto').html(title);
-				if (fundo != '') {
-					jQuery('#tree').attr('src', fundo);
-				} else {
-					jQuery('tree').attr('src', 'http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/tree.png');
-				}
+				jQuery('#text_title_produto').removeClass('text-black'); //text content title product
+				jQuery('#text_title_produto').addClass('text-white');
+					//change bacnkground image
+				jQuery('#conteudo').css('background-image', 'url(' + fundo + ')');
+
 				console.log(description);
 				console.log(title);
 				console.log(fundo);

@@ -9,12 +9,12 @@ class WidgetA extends Widget_Base
 
 	public function get_name()
 	{
-		return __('hello A', 'elementor-luaitech-addon');
+		return __('Cards Acrox', 'elementor-luaitech-addon');
 	}
 
 	public function get_title()
 	{
-		return esc_html__('Hello World A', 'elementor-luaitech-addon');
+		return esc_html__('Cards Acrox Bank', 'elementor-luaitech-addon');
 	}
 
 	public function get_icon()
@@ -37,26 +37,429 @@ class WidgetA extends Widget_Base
 		return 'https://elementor.com/docs/hello-world-widget/';
 	}
 
-	protected function register_controls()
+
+	function sessao_produto_bancario()
+	{
+
+		//Seção de Produtos
+
+
+
+
+		$this->start_controls_section(
+			'content_produtos_bancario',
+			[
+				'label' => esc_html__('Seção Produto Bancário', 'elementor-luaitech-addon'),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+
+			'pb_titulo',
+			[
+				'label' => esc_html__('Título', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Título', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pb_texto_principal',
+			[
+				'label' => esc_html__('Texto', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pbl-1',
+			[
+				'label' => esc_html__('Forma-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Visão1', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pbl-2',
+			[
+				'label' => esc_html__('Forma-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Missão1', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pbl-3',
+			[
+				'label' => esc_html__('Forma-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Valores1', 'elementor-luaitech-addon'),
+			]
+		);
+
+
+		$this->add_control(
+
+			'pbv-1',
+			[
+				'label' => esc_html__('Valor-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pbv-2',
+			[
+				'label' => esc_html__('Valor-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pbv-3',
+			[
+				'label' => esc_html__('Valor-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->end_controls_section();
+	}
+
+	function sessao_produto_estruturado()
+	{
+
+		//Seção de Produtos Não bancario
+
+
+
+
+		$this->start_controls_section(
+			'content_produtos_estruturado',
+			[
+				'label' => esc_html__('Seção Produto Estruturado', 'elementor-luaitech-addon'),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+
+			'peb_titulo',
+			[
+				'label' => esc_html__('Título', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Título', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'peb_texto_principal',
+			[
+				'label' => esc_html__('Texto', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pebl-1',
+			[
+				'label' => esc_html__('Forma-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Visão1', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pebl-2',
+			[
+				'label' => esc_html__('Forma-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Missão1', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pebl-3',
+			[
+				'label' => esc_html__('Forma-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Valores1', 'elementor-luaitech-addon'),
+			]
+		);
+
+
+		$this->add_control(
+
+			'pebv-1',
+			[
+				'label' => esc_html__('Valor-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pebv-2',
+			[
+				'label' => esc_html__('Valor-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pebv-3',
+			[
+				'label' => esc_html__('Valor-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->end_controls_section();
+	}
+
+
+
+	function sessao_produto_nao_bancario()
+	{
+
+		//Seção de Produtos Não bancario
+
+
+
+
+		$this->start_controls_section(
+			'content_produtos_nao_bancario',
+			[
+				'label' => esc_html__('Seção Produto Não Bancário', 'elementor-luaitech-addon'),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+
+			'pnb_titulo',
+			[
+				'label' => esc_html__('Título', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Título', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pnb_texto_principal',
+			[
+				'label' => esc_html__('Texto', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pnbl-1',
+			[
+				'label' => esc_html__('Forma-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Visão1', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pnbl-2',
+			[
+				'label' => esc_html__('Forma-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Missão1', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pnbl-3',
+			[
+				'label' => esc_html__('Forma-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Valores1', 'elementor-luaitech-addon'),
+			]
+		);
+
+
+		$this->add_control(
+
+			'pnbv-1',
+			[
+				'label' => esc_html__('Valor-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pnbv-2',
+			[
+				'label' => esc_html__('Valor-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'pnbv-3',
+			[
+				'label' => esc_html__('Valor-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->end_controls_section();
+	}
+
+
+
+
+
+	function sessao_institucional()
+	{
+		$this->start_controls_section(
+			'content_institucional',
+			[
+				'label' => esc_html__('Seção Institucional', 'elementor-luaitech-addon'),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+
+			'forma-1',
+			[
+				'label' => esc_html__('Forma-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Visão', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'forma-2',
+			[
+				'label' => esc_html__('Forma-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Missão', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'forma-3',
+			[
+				'label' => esc_html__('Forma-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Valores', 'elementor-luaitech-addon'),
+			]
+		);
+
+
+		$this->add_control(
+
+			'valor-1',
+			[
+				'label' => esc_html__('Valor-1', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'valor-2',
+			[
+				'label' => esc_html__('Valor-2', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->add_control(
+
+			'valor-3',
+			[
+				'label' => esc_html__('Valor-3', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Valor', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Texto do valor', 'elementor-luaitech-addon'),
+			]
+		);
+
+		$this->end_controls_section();
+	}
+
+
+	function institucional()
 	{
 		$this->start_controls_section(
 			'config_section',
 			[
-				'label' => esc_html__('Config', 'elementor-luaitech-addon'),
+				'label' => esc_html__('Institucional', 'elementor-luaitech-addon'),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
-		$this->add_control(
 
-			'title_header',
-			[
-				'label' => esc_html__('Header', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'placeholder' => esc_html__('Seu texto', 'elementor-luaitech-addon'),
-				'default' => esc_html__('PRODUTOS & SERVIÇOS', 'elementor-luaitech-addon'),
-			]);
-
-		//add header_description
+		//add Texto de descrição do header
 
 		$this->add_control(
 
@@ -64,379 +467,287 @@ class WidgetA extends Widget_Base
 			[
 				'label' => esc_html__('Header Description', 'elementor-luaitech-addon'),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'placeholder' => esc_html__('Descrição do Header', 'elementor-luaitech-addon'),
-				'default' => esc_html__('Conheças nossos produtos e serviços veja qual encaixa perfeitamente de acordo com a sua
-				necessidade.', 'elementor-luaitech-addon'),
-			]);
-
-		// add background header
+				'placeholder' => esc_html__('Forma', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Conheça nossos produtos e serviços veja qual encaixa perfeitamente </br> de
+			acordo com sua necessidade.', 'elementor-luaitech-addon'),
+			]
+		);
 
 		$this->add_control(
 
-			'background_header',
+			'title_header',
 			[
-				'label' => esc_html__('Background Header', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
-				],
-			]);
+				'label' => esc_html__('Header', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Seu texto', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Produtos & Serviços', 'elementor-luaitech-addon'),
+			]
+		);
+
+
+		// add titulo institutional
+		$this->add_control(
+
+			'titulo_institutional',
+			[
+				'label' => esc_html__('Texto Institucional', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Seu texto', 'elementor-luaitech-addon'),
+				'default' => esc_html__('Institucional', 'elementor-luaitech-addon'),
+			]
+		);
 
 		// add text institutional
-			$this->add_control(
-
-				'text_institutional',
-				[
-					'label' => esc_html__('Texto Institucional', 'elementor-luaitech-addon'),
-					'type' => \Elementor\Controls_Manager::TEXT,
-					'placeholder' => esc_html__('Seu texto', 'elementor-luaitech-addon'),
-					'default' => esc_html__('A ACROX BANK nasce com o propósito de ser o banco mais colaborativo e acolhedor do mercado Brasileiro, apoiando cada usuário a ter a sua visão
-					de mundo respeitada, com uma estrutura única de apoio para todos os sonhos se tornarem realidade', 'elementor-luaitech-addon'),
-				]);
-
-
-		$this->end_controls_section();
-
-
-		$this->start_controls_section(
-			'content_section',
-			[
-				'label' => esc_html__('Content', 'elementor-luaitech-addon'),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-			]
-		);
-
-		$repeater = new \Elementor\Repeater();
-
-		$repeater->add_control(
-			'slide_titulo',
-			[
-				'label' => esc_html__('Title', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => 'Hello World',
-				'placeholder' => esc_html__('Digite seu texto aqui', 'elementor-luaitech-addon'),
-			]
-		);
-
-		$repeater->add_control(
-			'slide_description',
-			[
-				'label' => esc_html__('Descrição do slide', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'rows' => 10,
-				'default' => esc_html__('He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War', 'elementor-luaitech-addon'),
-				'placeholder' => esc_html__('Seu texto aqui', 'elementor-luaitech-addon'),
-			]
-		);
-
-		$repeater->add_control(
-			'image',
-			[
-				'label' => esc_html__('Selecionar Slide', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
-				],
-				'show_label' => true,
-				'dynamic' => [
-					'active' => true,
-				],
-			]
-		);
-
-		//imagem com descrição dos produtos
-		$repeater->add_control(
-			'img_descricao',
-			[
-				'label' => esc_html__('Selecionar Imagem circulos', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
-				],
-				'show_label' => true,
-				'dynamic' => [
-					'active' => true,
-				],
-			]
-		);
-
-		//add background imagem
-
-		$repeater->add_control(
-			'background_imagem',
-			[
-				'label' => esc_html__('Background Imagem do produto', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
-				],
-				'show_label' => true,
-				'dynamic' => [
-					'active' => true,
-				],
-			]
-		);
-
-
-
-		$repeater->add_group_control(
-			\Elementor\Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail', // Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.
-				'exclude' => ['custom'],
-				'include' => [],
-				'default' => 'large',
-			]
-		);
-
-		$repeater->add_control(
-			'slide_color',
-			[
-				'label' => __('Card Color', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'Red',
-				'options' => [
-					'Red'  => __('Red', 'elementor-luaitech-addon'),
-					'Pink' => __('Pink', 'elementor-luaitech-addon'),
-					'Purple' => __('Purple', 'elementor-luaitech-addon'),
-					'Deep-Purple' => __('Deep-Purple', 'elementor-luaitech-addon'),
-					'Indigo' => __('Indigo', 'elementor-luaitech-addon'),
-					'Blue'  => __('Blue', 'elementor-luaitech-addon'),
-					'Light-Blue' => __('Light-Blue', 'elementor-luaitech-addon'),
-					'Cyan' => __('Cyan', 'elementor-luaitech-addon'),
-					'Teal' => __('Teal', 'elementor-luaitech-addon'),
-					'Green' => __('Green', 'elementor-luaitech-addon'),
-					'Light-Green'  => __('Light-Green', 'elementor-luaitech-addon'),
-					'Lime' => __('Lime', 'elementor-luaitech-addon'),
-					'Yellow' => __('Yellow', 'elementor-luaitech-addon'),
-					'Amber' => __('Amber', 'elementor-luaitech-addon'),
-					'Orange' => __('Orange', 'elementor-luaitech-addon'),
-					'Deep-Orange' => __('Deep-Orange', 'elementor-luaitech-addon'),
-					'Brown' => __('Brown', 'elementor-luaitech-addon'),
-					'Grey' => __('Grey', 'elementor-luaitech-addon'),
-					'Blue-Grey' => __('Blue-Grey', 'elementor-luaitech-addon'),
-				],
-			]
-		);
-
 		$this->add_control(
-			'slide_card',
-			[
-				'label' => __('Cards List Slide', 'elementor-luaitech-addon'),
-				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
-				'default' => [
-					[
-						'slide_titulo' => __('John Doe.', 'elementor-luaitech-addon'),
-						'slide_description' => __('He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...', 'elementor-luaitech-addon'),
-					],
-					[
-						'slide_titulo' => __('John Doe.', 'elementor-luaitech-addon'),
-						'slide_description' => __('He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...', 'elementor-luaitech-addon'),
-					],
 
-				],
-				'title_field' => '{{{ slide_titulo }}}',
+			'text_institutional',
+			[
+				'label' => esc_html__('Texto Institucional', 'elementor-luaitech-addon'),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Seu texto', 'elementor-luaitech-addon'),
+				'default' => esc_html__('A ACROX BANK nasce com o propósito de ser o banco mais colaborativo e acolhedor do mercado Brasileiro, apoiando cada usuário a ter a sua visão
+						de mundo respeitada, com uma estrutura única de apoio para todos os sonhos se tornarem realidade', 'elementor-luaitech-addon'),
 			]
 		);
 
 
 		$this->end_controls_section();
+		// final da seção institucional
 
-		$this->start_controls_section(
-			'typography_section',
-			[
-				'label' => __('Typography Controls', 'plugin-name'),
-				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
-			]
-		);
-		$this->add_group_control(
-			\Elementor\Group_Control_Typography::get_type(),
-			[
-				'name' => 'titulo_typo',
-				'label' => __('Titulo', 'plugin-domain'),
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .material-card h2 .main-title',
-			]
-		);
+		//Seção de Produtos
 
-		$this->end_controls_section();
+
+	}
+
+	public static function set_placeholder_image_src_background_product()
+	{
+		$placeholder_image = plugins_url('assets/images/placeholder.png', __FILE__);
+		$placeholder_image = apply_filters('elementor/utils/get_placeholder_image_src', $placeholder_image);
+
+		return $placeholder_image;
+	}
+
+	protected function register_controls()
+	{
+		$this->institucional();
+		$this->sessao_institucional();
+		$this->sessao_produto_bancario();
+		$this->sessao_produto_nao_bancario();
+		$this->sessao_produto_estruturado();
 	}
 	protected function render()
 	{
 		$settings = $this->get_settings_for_display();
+		#var_dump($settings); exit;
 
-		if ($settings['slide_card']) {  ?>
+		if ($settings['title_header']) {  ?>
 
-			<main>
-				<!--Showcase-->
-				<div class="showcase-bg">
-					<div class="mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6">
-						<div class="pt-10 sm:text-center lg:text-left">
-							<h1 class="text-xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-3xl text-white">
-								<span class="block xl:inline"><?php echo $settings['title_header'];?></span>
-							</h1>
-							<p class="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"><?php echo $settings['header_description']?></p>
+			<div class="main-section">
+				<div class="section-header">
+					<div class="section-header-title">
+						<div class="section-square">
+							<h1><?php echo $settings['title_header']; ?></h1>
 						</div>
-
-
-
-						<div class="flex flex-wrap-reverse gap-y-24 justify-between py-7 px-6 mx-auto max-w-screen-xl sm:px-8 md:px-12 lg:px-16 xl:px-24">
-							<div class="relative z-10 md:w-1/2 w-full">
-							<div class="swiper-container">
-
-							<div class="swiper-wrapper">
-
-								<?php
-
-								foreach ($settings['slide_card'] as $slide) {
-									$fundo_url = \Elementor\Group_Control_Image_Size::get_attachment_image_src($slide['background_imagem']['id'], 'thumbnail', $settings);
-									$image_url = \Elementor\Group_Control_Image_Size::get_attachment_image_src($slide['image']['id'], 'thumbnail', $settings);
-
-								?>
-                                <div class="swiper-slide" data-description="<?php esc_attr_e($slide['slide_description']); ?>" data-title="<?php esc_attr_e($slide['slide_titulo']); ?>" data-fundo="<?php esc_attr_e($fundo_url); ?>" >
-									<img src="<?php echo $image_url; ?>" alt="" class="w-5/6 h-5/6 sm:w-4/4 sm:h-4/4 md:w-full md:h-full img-2">
-                                </div>
-								<?php } ?>
-                                </div>
-
-								<div class="swiper-pagination"></div>
-								<div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+					</div>
+					<p>
+						<?php echo $settings['header_description']; ?>
+					</p>
+				</div>
+				<div class="section-container">
+					<div class="product-container">
+						<div class="product-cards">
+							<div class="product-card-item" id="Pbancario" >
+								<img src="<?php echo plugins_url('assets/images/img/icon-1.svg', ELEMENTOR_LUAITECH_ADDON_FILE);  ?>" alt="">
+								<p>Produtos Bancários</p>
+							</div>
+							<div class="product-card-item" id="Pnbancario">
+								<img src="<?php echo plugins_url('assets/images/img/icon-2-1.svg', ELEMENTOR_LUAITECH_ADDON_FILE);  ?>" alt="">
+								<p>Produtos Não Bancários</p>
+							</div>
+							<div class="product-card-item" id="Pebancario">
+								<img src="<?php echo plugins_url('assets/images/img/icon-3-1.svg', ELEMENTOR_LUAITECH_ADDON_FILE);  ?>" alt="">
+								<p>Projetos Estruturados</p>
 							</div>
 
+						</div>
+						<div class="product-gradient">
+							<div class="product-gradient-text">
+								<p>Encontrou o que deseja? Entre em <strong>contato</strong> agora mesmo!</p>
+							</div>
+						</div>
+					</div>
+					<div class="service-container">
+					<span id="institucional-label"  data-forma1="<?php echo $settings['forma-1']; ?>" data-forma2="<?php echo $settings['forma-2']; ?>" data-forma3="<?php echo $settings['forma-3']; ?>" ></span>
+					<span id="institucional-value"  data-valor1="<?php echo $settings['valor-1']; ?>" data-valor2="<?php echo $settings['valor-2']; ?>" data-valor3="<?php echo $settings['valor-3']; ?>" ></span>
+
+					<span id="prodbc-info"  data-pbcTitulo="<?php echo $settings['pb_titulo']; ?>" data-pbcTexto="<?php echo $settings['pb_texto_principal']; ?>" ></span>
+					<span id="prodbc-label"  data-pbcL-1="<?php echo $settings['pbl-1']; ?>" data-pbcL-2="<?php echo $settings['pbl-2']; ?>" data-pbcL-3="<?php echo $settings['pbl-3']; ?>" ></span>
+					<span id="prodbc-value"  data-pbcV-1="<?php echo $settings['pbv-1']; ?>" data-pbcV-2="<?php echo $settings['pbv-2']; ?>" data-pbcV-3="<?php echo $settings['pbv-3']; ?>" ></span>
+
+					<span id="prodnbc-info"  data-pnbcTitulo="<?php echo $settings['pnb_titulo']; ?>" data-pnbcTexto="<?php echo $settings['pnb_texto_principal']; ?>" ></span>
+					<span id="prodnbc-label"  data-pnbcL-1="<?php echo $settings['pnbl-1']; ?>" data-pnbcL-2="<?php echo $settings['pnbl-2']; ?>" data-pnbcL-3="<?php echo $settings['pnbl-3']; ?>" ></span>
+					<span id="prodnbc-value"  data-pnbcV-1="<?php echo $settings['pnbv-1']; ?>" data-pnbcV-2="<?php echo $settings['pnbv-2']; ?>" data-pnbcV-3="<?php echo $settings['pnbv-3']; ?>" ></span>
+
+					<span id="prodebc-info"  data-pebcTitulo="<?php echo $settings['peb_titulo']; ?>" data-pebcTexto="<?php echo $settings['peb_texto_principal']; ?>" ></span>
+					<span id="prodebc-label"  data-pebcL-1="<?php echo $settings['pebl-1']; ?>" data-pebcL-2="<?php echo $settings['pebl-2']; ?>" data-pebcL-3="<?php echo $settings['pebl-3']; ?>" ></span>
+					<span id="prodebc-value"  data-pebcV-1="<?php echo $settings['pebv-1']; ?>" data-pebcV-2="<?php echo $settings['pebv-2']; ?>" data-pebcV-3="<?php echo $settings['pebv-3']; ?>" ></span>
+
+						<div class="service-card-header">
+							<div class="service-card-header-title">
+								<div class="service-square">
+									<h1 id="text_title_produto"><?php echo $settings['titulo_institutional']; ?></h1>
 								</div>
+							</div>
+							<p id="texto-custom">
+								<?php echo $settings['text_institutional']; ?>
+							</p>
+						</div>
+						<div class="service-cards">
+							<div class="service-card-item">
+								<div class="circle" id="forma-1"><?php echo $settings['forma-1']; ?></div>
+								<div class="service-card-text">
+									<p id="texto-1">
+										<?php echo $settings['valor-1']; ?>
+									</p>
+								</div>
+							</div>
+							<div class="service-card-item">
+								<div class="circle" id="forma-2"><?php echo $settings['forma-2']; ?></div>
 
-
-							<div class="relative md:w-1/2 w-full flex flex-col justify-between">
-
+								<div class="service-card-text">
+									<p id="texto-2">
+										<?php echo $settings['valor-2']; ?>
+									</p>
+								</div>
+							</div>
+							<div class="service-card-item">
+								<div class="circle" id="forma-3"><?php echo $settings['forma-3']; ?></div>
+								<div class="service-card-text">
+									<p id="texto-3">
+										<?php echo $settings['valor-3']; ?>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--Show case end-->
-				<div class="font-sans text-gray-900 bg-1" id="conteudo" style="	background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/cor/01.png') no-repeat center center/cover;">
-					<div class="mx-auto max-w-7xl px-4  sm:px-6">
-						<div class="pt-10 sm:text-center lg:text-left">
-							<h1 class="text-xl  pt-10 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-3xl text-black">
-								<span class="block xl:inline" id="text_title_produto">INSTITUCIONAL</span>
-							</h1>
-							<p class="mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-4xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0" id="text_institutional">
-									<?php echo $settings['text_institutional']; ?>
-						</div>
-					</div>
-					<div class="flex flex-wrap-reverse gap-y-24 justify-between py-7 px-6 mx-auto max-w-screen-xl sm:px-8 md:px-12 lg:px-16 xl:px-24">
-						<div class="relative z-10 md:w-1/2 w-full">
-							<img src="http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/third.png" alt="" class="w-5/6 h-5/6 sm:w-4/4 sm:h-4/4 md:w-full md:h-full img-2">
-						</div>
+					<div class="section-store">
+						<h1>Conheça o nosso APP</h1>
+						<p>O aplicativo móvel do <strong>Acrocx Bank</strong> ,um centro de recursos principal, está b
+							aqui para ajudá-lo a se ajustar à nova maneira de trabalhar.</p>
+						<div class="section-store-img">
 
-						<div class="relative md:w-1/2 w-full flex flex-col justify-between">
-							<img src="http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/tree.png" alt="" class="w-4/6 h-50 ml-10 lg:self-end" id="tree">
+							<a href="">
+								<img src="<?php echo plugins_url('assets/images/img/apple.svg', ELEMENTOR_LUAITECH_ADDON_FILE);  ?>" class="section-store-app" />
+							</a> <a href="">
+								<img src="<?php echo plugins_url('assets/images/img/google.svg', ELEMENTOR_LUAITECH_ADDON_FILE);  ?>" class="section-store-app" />
+							</a>
+
 						</div>
 					</div>
 				</div>
+			</div>
 
-
-			</main>
-
-
-
-	<?php		} ?>
-	<!-- !pagination dots -->
+		<?php		} ?>
+		<!-- !pagination dots -->
 
 
 
 
-	<script>
-		var autoplayData = {
-			delay: 1000 * 3,
-			disableOnInteraction: false,
-		};
-		var loopData = false;
-		var slideEffect = 'slide';
+		<script>
 
-		const swiper = new Swiper('.swiper-container', {
-			slidesPerView: 3,
-			loop: loopData,
-			spaceBetween: 1,
-			freeMode: true,
+			function produto_bancario() {
+				jQuery('#Pbancario').click(function() {
+					console.log('Pagamento Bancário');
+					var pb_titulo = jQuery('#prodbc-info').attr('data-pbcTitulo');
+					var pb_texto_principal = jQuery('#prodbc-info').attr('data-pbcTexto');
+					jQuery('#text_title_produto').text(pb_titulo);
+					jQuery('#texto-custom').text(pb_texto_principal);
 
-			pagination: {
-				el: '.swiper-pagination',
-				"dynamicBullets": true,
-				clickable: true,
-			},
-
-			effect: slideEffect,
-
-			cubeEffect: {
-				shadow: false,
-				slideShadows: false,
-				shadowOffset: 1,
-				shadowScale: 0.94,
-			},
-			creativeEffect: {
-				prev: {
-					shadow: true,
-					translate: [0, 0, -400],
-				},
-				next: {
-					translate: ["100%", 0, 0],
-				},
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			keyboard: {
-				enabled: false,
-			},
-			//grabCursor: true,
-
-			autoplay: true, //autoplayData,
-			preventClicks: false,
-			preventClicksPropagation: false,
-
-		});
+					var datapbcL1 =jQuery('#prodbc-label').attr('data-pbcL-1');
+					var datapbcL2 =jQuery('#prodbc-label').attr('data-pbcL-2');
+					var datapbcL3 =jQuery('#prodbc-label').attr('data-pbcL-3');
+					var datapbcV1 =jQuery('#prodbc-value').attr('data-pbcV-1');
+					var datapbcV2 =jQuery('#prodbc-value').attr('data-pbcV-2');
+					var datapbcV3 =jQuery('#prodbc-value').attr('data-pbcV-3');
 
 
-		console.log(swiper);
-		jQuery(document).ready(function() {
-			jQuery('.swiper-slide img').click(function() {
+					jQuery('#forma-1').html(datapbcL1);
+					jQuery('#forma-2').html(datapbcL2);
+					jQuery('#forma-3').html(datapbcL3);
 
-				var description = jQuery(this).parent().attr('data-description');
-				var title = jQuery(this).parent().attr('data-title');
-				var fundo = jQuery(this).parent().attr('data-fundo');
-				console.log(fundo);
-				//	jQuery('#conteudo').removeClass('invisible');
-				//change text_institutional color
-				jQuery('#text_institutional').html(description);
-				jQuery('#text_institutional').removeClass('text-black'); //text content description product
-				jQuery('#text_institutional').addClass('text-white');
-				jQuery('#text_title_produto').html(title);
-				jQuery('#text_title_produto').removeClass('text-black'); //text content title product
-				jQuery('#text_title_produto').addClass('text-white');
-					//change bacnkground image
-				jQuery('#conteudo').css('background-image', 'url(' + fundo + ')');
+					jQuery('#texto-1').html(datapbcV1);
+					jQuery('#texto-2').html(datapbcV2);
+					jQuery('#texto-3').html(datapbcV3);
 
-				console.log(description);
-				console.log(title);
-				console.log(fundo);
+				});
+
+			}
+
+
+			function produto_nao_bancario() {
+				jQuery('#Pnbancario').click(function() {
+					console.log('Pagamento Não Bancário');
+					var pnb_titulo = jQuery('#prodnbc-info').attr('data-pnbcTitulo');
+					var pnb_texto_principal = jQuery('#prodnbc-info').attr('data-pnbcTexto');
+					console.log(pnb_texto_principal);
+					jQuery('#text_title_produto').text(pnb_titulo);
+					jQuery('#texto-custom').text(pnb_texto_principal);
+
+					var datapnbcL1 =jQuery('#prodnbc-label').attr('data-pnbcL-1');
+					var datapnbcL2 =jQuery('#prodnbc-label').attr('data-pnbcL-2');
+					var datapnbcL3 =jQuery('#prodnbc-label').attr('data-pnbcL-3');
+					var datapnbcV1 =jQuery('#prodnbc-value').attr('data-pnbcV-1');
+					var datapnbcV2 =jQuery('#prodnbc-value').attr('data-pnbcV-2');
+					var datapnbcV3 =jQuery('#prodnbc-value').attr('data-pnbcV-3');
+
+
+					jQuery('#forma-1').html(datapnbcL1);
+					jQuery('#forma-2').html(datapnbcL2);
+					jQuery('#forma-3').html(datapnbcL3);
+
+					jQuery('#texto-1').html(datapnbcV1);
+					jQuery('#texto-2').html(datapnbcV2);
+					jQuery('#texto-3').html(datapnbcV3);
+
+				});
+
+			}
+
+
+			function produto_estruturado() {
+				jQuery('#Pebancario').click(function() {
+					console.log('Pagamento  Estruturado');
+					var peb_titulo = jQuery('#prodebc-info').attr('data-pebcTitulo');
+					var peb_texto_principal = jQuery('#prodebc-info').attr('data-pebcTexto');
+					console.log(peb_texto_principal);
+					jQuery('#text_title_produto').text(peb_titulo);
+					jQuery('#texto-custom').text(peb_texto_principal);
+
+					var datapebcL1 =jQuery('#prodebc-label').attr('data-pebcL-1');
+					var datapebcL2 =jQuery('#prodebc-label').attr('data-pebcL-2');
+					var datapebcL3 =jQuery('#prodebc-label').attr('data-pebcL-3');
+					var datapebcV1 =jQuery('#prodebc-value').attr('data-pebcV-1');
+					var datapebcV2 =jQuery('#prodebc-value').attr('data-pebcV-2');
+					var datapebcV3 =jQuery('#prodebc-value').attr('data-pebcV-3');
+
+
+					jQuery('#forma-1').html(datapebcL1);
+					jQuery('#forma-2').html(datapebcL2);
+					jQuery('#forma-3').html(datapebcL3);
+
+					jQuery('#texto-1').html(datapebcV1);
+					jQuery('#texto-2').html(datapebcV2);
+					jQuery('#texto-3').html(datapebcV3);
+
+				});
+
+			}
+			jQuery(document).ready(function() {
+				produto_bancario();
+				produto_nao_bancario();
+				produto_estruturado();
 			});
-
-
-			/* jQuery('.slider_click').click(function() {
-				var description = jQuery(this).parent().attr('data-description');
-				var title = jQuery(this).parent().attr('data-title');
-
-				jQuery('#content_slide').removeClass('hidden');
-				jQuery('.slide_titulo').html(title);
-				jQuery('.slide_description').html(description);
-				console.log('click');
-				//swiper.slideTo(loop, 1000, false);
-			}); */
-		});
-	</script>
+		</script>
 <?php
 	}
 }

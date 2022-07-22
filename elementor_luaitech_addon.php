@@ -21,4 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once( __DIR__ . '/includes/plugin.php' );
 
+define( 'ELEMENTOR_LUAITECH_ADDON_VERSION', '0.1.0' );
+define( 'ELEMENTOR_LUAITECH_ADDON_FILE', __FILE__ );
 \Elementor_Luaitech_Addon\Plugin::instance();

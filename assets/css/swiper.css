@@ -173,7 +173,7 @@
 .showcase-bg {
     width: 100%;
 	position: relative;
-	background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/showcase-bg.png') no-repeat center center/cover;
+	background: url('../images/showcase-bg.png') no-repeat center center/cover;
     height: 70vh;
 }
 
@@ -188,7 +188,7 @@
     .bg-1 {
         width: 100%;
         position: relative;
-        background: url('http://localhost/bank/wp-content/plugins/elementor_luaitech_addon/assets/images/bg/01.svg') no-repeat center center/cover;
+        background: url('../images/bg/01.svg') no-repeat center center/cover;
         height: 80%;
 
     }
@@ -197,4 +197,40 @@
         width: 40rem;
         bottom: 4rem;
     }
+}
+
+/* remover botoes do carousel */
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+}
+
+/* adicionar novos bts do carrousel
+ */.swiper-button-prev {
+	background-image: url("../images/icon_prev.png") !important;
+  }
+
+  .swiper-button-next{
+	background-image: url("../images/icon_next.png") !important;
+  }
+
+  .showcase-bg{
+	background-color: red !important;
+  }
+
+#teste{
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+#text_title_produto{
+    color : black;
+}
+#text_institutional{
+color : black;
+}
+#tamanho{
+	 margin-top: -10px;
 }
